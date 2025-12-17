@@ -84,7 +84,6 @@ function App() {
             View Projects
           </a>
         </div>
-        <div className="mt-16 text-gray-400 text-base animate-bounce">Scroll down ↓</div>
       </section>
 
       {/* About Section */}
@@ -103,8 +102,8 @@ function App() {
           <div className="animate-on-scroll delay-400 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
             {[
               { icon: <FaLaptopCode className="w-24 h-24 text-cyan-400" />, title: "Full Stack Developer", desc: "End-to-end web solutions" },
-              { icon: <FaDatabase className="w-24 h-24 text-cyan-400" />, title: "Database Expert", desc: "SQL & NoSQL mastery" },
-              { icon: <FaExchangeAlt className="w-24 h-24 text-cyan-400" />, title: "API Architect", desc: "RESTful & scalable APIs" },
+              { icon: <FaDatabase className="w-24 h-24 text-cyan-400" />, title: "Database Fundamentals", desc: "Hands-on experience with SQL & NoSQL databases" },
+              { icon: <FaExchangeAlt className="w-24 h-24 text-cyan-400" />, title: "API Development", desc: "Familiar with RESTful API design and implementation" },
               { icon: <FaBrain className="w-24 h-24 text-cyan-400" />, title: "Problem Solver", desc: "Analytical thinking & debugging" }
             ].map((card, idx) => (
               <div 
@@ -173,132 +172,143 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section - Images now clickable (open live demo) */}
-      <section id="projects" className="min-h-screen flex flex-col justify-center px-8 bg-gray-900 pt-20 pb-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="animate-on-scroll text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 mb-14">Featured Projects</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {/* Project 1 */}
-            <div className="group relative rounded-3xl overflow-hidden transition-all duration-700 hover:-translate-y-6 hover:shadow-2xl hover:shadow-cyan-500/50">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-500 p-px animate-pulse-glow">
-                <div className="h-full w-full rounded-3xl bg-gray-800/90 backdrop-blur-md" />
-              </div>
-              <div className="relative bg-transparent rounded-3xl overflow-hidden h-full flex flex-col">
-                <a href="https://tpgit-hostels.vercel.app/" target="_blank" rel="noopener noreferrer" className="block overflow-hidden">
-                  <img 
-                    src="https://i.ibb.co/k2XjZ4TL/hostel.png" 
-                    alt="Hostel Mess Bill Management" 
-                    className="w-full h-64 object-cover transition-transform duration-1000 group-hover:scale-110" 
-                  />
-                </a>
-                <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-white mb-3 transition-colors duration-300 group-hover:text-cyan-300">
-                    Hostel Mess Bill Management
-                  </h3>
-                  <p className="text-gray-300 mb-6 text-base flex-grow">
-                    Full-stack system managing billing for 7,000+ students across 6+ modules with automated calculations.
-                  </p>
-                  <div className="flex flex-wrap gap-3 mb-8">
-                    {["React", "Node.js", "Express", "Tailwind", "Supabase"].map((tech) => (
-                      <span key={tech} className="px-4 py-2 bg-cyan-900/40 border border-cyan-800 rounded-full text-cyan-300 text-sm font-medium transition-all duration-300 group-hover:scale-105 group-hover:bg-cyan-800/60">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-6 mt-auto">
-                    <a href="https://tpgit-hostels.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center text-cyan-300 hover:text-cyan-100 font-medium transition-all duration-300 group-hover:translate-x-2">
-                      Live Demo <FaExternalLinkAlt className="ml-2" size={16} />
-                    </a>
-                    <a href="https://github.com/Janasmarty/Hostel-Management-Application" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white font-medium transition-all duration-300 group-hover:translate-x-2">
-                      <FaGithub className="mr-2" size={20} /> Code
-                    </a>
-                  </div>
-                </div>
-              </div>
+      {/* Projects Section - Images with Neon Border Glow */}
+<section id="projects" className="min-h-screen flex flex-col justify-center px-8 bg-gray-900 pt-20 pb-20">
+  <div className="max-w-6xl mx-auto">
+    <div className="animate-on-scroll text-center">
+      <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 mb-14">Featured Projects</h2>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      {/* Project 1 */}
+      <div className="group relative rounded-3xl overflow-hidden transition-all duration-700 hover:-translate-y-6 hover:shadow-2xl hover:shadow-cyan-500/50">
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-500 p-px animate-pulse-glow">
+          <div className="h-full w-full rounded-3xl bg-gray-800/90 backdrop-blur-md" />
+        </div>
+        <div className="relative bg-transparent rounded-3xl overflow-hidden h-full flex flex-col">
+          <a href="https://tpgit-hostels.vercel.app/" target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden">
+            {/* Neon Border Around Image */}
+            <div className="relative m-4 rounded-2xl overflow-hidden ring-1 ring-cyan-500/50 shadow-lg shadow-cyan-500/20 transition-all duration-500 group-hover:ring-2 group-hover:ring-cyan-400 group-hover:shadow-xl group-hover:shadow-cyan-500/40">
+              <img 
+                src="https://i.ibb.co/k2XjZ4TL/hostel.png" 
+                alt="Hostel Mess Bill Management" 
+                className="w-full h-64 object-cover transition-transform duration-1000 group-hover:scale-110" 
+              />
+              {/* Optional overlay glow on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
             </div>
-
-            {/* Project 2 */}
-            <div className="group relative rounded-3xl overflow-hidden transition-all duration-700 hover:-translate-y-6 hover:shadow-2xl hover:shadow-cyan-500/50">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-500 p-px animate-pulse-glow">
-                <div className="h-full w-full rounded-3xl bg-gray-800/90 backdrop-blur-md" />
-              </div>
-              <div className="relative bg-transparent rounded-3xl overflow-hidden h-full flex flex-col">
-                <a href="https://janaupskill.vercel.app/" target="_blank" rel="noopener noreferrer" className="block overflow-hidden">
-                  <img 
-                    src="https://i.ibb.co/Q70tyx93/upskill.png" 
-                    alt="Upskill Learning Platform" 
-                    className="w-full h-64 object-cover transition-transform duration-1000 group-hover:scale-110" 
-                  />
-                </a>
-                <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-white mb-3 transition-colors duration-300 group-hover:text-cyan-300">
-                    Upskill Learning Platform
-                  </h3>
-                  <p className="text-gray-300 mb-6 text-base flex-grow">
-                    Responsive educational platform with modern UI, interactive components, and smooth user flow.
-                  </p>
-                  <div className="flex flex-wrap gap-3 mb-8">
-                    {["React", "Tailwind CSS", "JavaScript", "Vite"].map((tech) => (
-                      <span key={tech} className="px-4 py-2 bg-cyan-900/40 border border-cyan-800 rounded-full text-cyan-300 text-sm font-medium transition-all duration-300 group-hover:scale-105 group-hover:bg-cyan-800/60">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-6 mt-auto">
-                    <a href="https://janaupskill.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center text-cyan-300 hover:text-cyan-100 font-medium transition-all duration-300 group-hover:translate-x-2">
-                      Live Demo <FaExternalLinkAlt className="ml-2" size={16} />
-                    </a>
-                    <a href="https://github.com/Janasmarty/upskill" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white font-medium transition-all duration-300 group-hover:translate-x-2">
-                      <FaGithub className="mr-2" size={20} /> Code
-                    </a>
-                  </div>
-                </div>
-              </div>
+          </a>
+          <div className="p-8 flex flex-col flex-grow">
+            <h3 className="text-2xl font-bold text-white mb-3 transition-colors duration-300 group-hover:text-cyan-300">
+              Hostel Mess Bill Management
+            </h3>
+            <p className="text-gray-300 mb-6 text-base flex-grow">
+              Full-stack system managing billing for 7,000+ students across 6+ modules with automated calculations.
+            </p>
+            <div className="flex flex-wrap gap-3 mb-8">
+              {["React JS", "Node.js", "Express JS", "Tailwind", "Supabase"].map((tech) => (
+                <span key={tech} className="px-4 py-2 bg-cyan-900/40 border border-cyan-800 rounded-full text-cyan-300 text-sm font-medium transition-all duration-300 group-hover:scale-105 group-hover:bg-cyan-800/60">
+                  {tech}
+                </span>
+              ))}
             </div>
-
-            {/* Project 3 */}
-            <div className="group relative rounded-3xl overflow-hidden transition-all duration-700 hover:-translate-y-6 hover:shadow-2xl hover:shadow-cyan-500/50">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-500 p-px animate-pulse-glow">
-                <div className="h-full w-full rounded-3xl bg-gray-800/90 backdrop-blur-md" />
-              </div>
-              <div className="relative bg-transparent rounded-3xl overflow-hidden h-full flex flex-col">
-                <a href="#" target="_blank" rel="noopener noreferrer" className="block overflow-hidden">
-                  <img 
-                    src="https://i.ibb.co/Q70tyx93/upskill.png" 
-                    alt="AI Crop Disease Detection" 
-                    className="w-full h-64 object-cover transition-transform duration-1000 group-hover:scale-110" 
-                  />
-                </a>
-                <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-white mb-3 transition-colors duration-300 group-hover:text-cyan-300">
-                    AI Crop Disease Detection
-                  </h3>
-                  <p className="text-gray-300 mb-6 text-base flex-grow">
-                    CNN-based web app achieving 98% accuracy in identifying crop diseases from leaf images.
-                  </p>
-                  <div className="flex flex-wrap gap-3 mb-8">
-                    {["Python", "TensorFlow", "PyTorch", "Streamlit", "OpenCV"].map((tech) => (
-                      <span key={tech} className="px-4 py-2 bg-cyan-900/40 border border-cyan-800 rounded-full text-cyan-300 text-sm font-medium transition-all duration-300 group-hover:scale-105 group-hover:bg-cyan-800/60">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-6 mt-auto">
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center text-cyan-300 hover:text-cyan-100 font-medium transition-all duration-300 group-hover:translate-x-2">
-                      Live Demo <FaExternalLinkAlt className="ml-2" size={16} />
-                    </a>
-                    <a href="https://github.com/Janasmarty/Hostel-Management-Application" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white font-medium transition-all duration-300 group-hover:translate-x-2">
-                      <FaGithub className="mr-2" size={20} /> Code
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div className="flex gap-6 mt-auto">
+              <a href="https://tpgit-hostels.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center text-cyan-300 hover:text-cyan-100 font-medium transition-all duration-300 group-hover:translate-x-2">
+                Live Demo <FaExternalLinkAlt className="ml-2" size={16} />
+              </a>
+              <a href="https://github.com/Janasmarty/Hostel-Management-Application" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white font-medium transition-all duration-300 group-hover:translate-x-2">
+                <FaGithub className="mr-2" size={20} /> Code
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Project 2 */}
+      <div className="group relative rounded-3xl overflow-hidden transition-all duration-700 hover:-translate-y-6 hover:shadow-2xl hover:shadow-cyan-500/50">
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-500 p-px animate-pulse-glow">
+          <div className="h-full w-full rounded-3xl bg-gray-800/90 backdrop-blur-md" />
+        </div>
+        <div className="relative bg-transparent rounded-3xl overflow-hidden h-full flex flex-col">
+          <a href="https://janaupskill.vercel.app/" target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden">
+            <div className="relative m-4 rounded-2xl overflow-hidden ring-1 ring-cyan-500/50 shadow-lg shadow-cyan-500/20 transition-all duration-500 group-hover:ring-2 group-hover:ring-cyan-400 group-hover:shadow-xl group-hover:shadow-cyan-500/40">
+              <img 
+                src="https://i.ibb.co/Q70tyx93/upskill.png" 
+                alt="Upskill Learning Platform" 
+                className="w-full h-64 object-cover transition-transform duration-1000 group-hover:scale-110" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+            </div>
+          </a>
+          <div className="p-8 flex flex-col flex-grow">
+            <h3 className="text-2xl font-bold text-white mb-3 transition-colors duration-300 group-hover:text-cyan-300">
+              Upskill Learning Platform
+            </h3>
+            <p className="text-gray-300 mb-6 text-base flex-grow">
+              Responsive educational platform with modern UI, interactive components, and smooth user flow.
+            </p>
+            <div className="flex flex-wrap gap-3 mb-8">
+              {["React JS", "Tailwind CSS", "JavaScript", "Vite"].map((tech) => (
+                <span key={tech} className="px-4 py-2 bg-cyan-900/40 border border-cyan-800 rounded-full text-cyan-300 text-sm font-medium transition-all duration-300 group-hover:scale-105 group-hover:bg-cyan-800/60">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="flex gap-6 mt-auto">
+              <a href="https://janaupskill.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center text-cyan-300 hover:text-cyan-100 font-medium transition-all duration-300 group-hover:translate-x-2">
+                Live Demo <FaExternalLinkAlt className="ml-2" size={16} />
+              </a>
+              <a href="https://github.com/Janasmarty/upskill" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white font-medium transition-all duration-300 group-hover:translate-x-2">
+                <FaGithub className="mr-2" size={20} /> Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Project 3 */}
+      <div className="group relative rounded-3xl overflow-hidden transition-all duration-700 hover:-translate-y-6 hover:shadow-2xl hover:shadow-cyan-500/50">
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-500 p-px animate-pulse-glow">
+          <div className="h-full w-full rounded-3xl bg-gray-800/90 backdrop-blur-md" />
+        </div>
+        <div className="relative bg-transparent rounded-3xl overflow-hidden h-full flex flex-col">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden">
+            <div className="relative m-4 rounded-2xl overflow-hidden ring-1 ring-cyan-500/50 shadow-lg shadow-cyan-500/20 transition-all duration-500 group-hover:ring-2 group-hover:ring-cyan-400 group-hover:shadow-xl group-hover:shadow-cyan-500/40">
+              <img 
+                src="https://i.ibb.co/Q70tyx93/upskill.png" 
+                alt="AI Crop Disease Detection" 
+                className="w-full h-64 object-cover transition-transform duration-1000 group-hover:scale-110" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+            </div>
+          </a>
+          <div className="p-8 flex flex-col flex-grow">
+            <h3 className="text-2xl font-bold text-white mb-3 transition-colors duration-300 group-hover:text-cyan-300">
+              AI Crop Disease Detection
+            </h3>
+            <p className="text-gray-300 mb-6 text-base flex-grow">
+              CNN-based web app achieving 98% accuracy in identifying crop diseases from leaf images.
+            </p>
+            <div className="flex flex-wrap gap-3 mb-8">
+              {["Python", "TensorFlow", "PyTorch", "Streamlit", "OpenCV"].map((tech) => (
+                <span key={tech} className="px-4 py-2 bg-cyan-900/40 border border-cyan-800 rounded-full text-cyan-300 text-sm font-medium transition-all duration-300 group-hover:scale-105 group-hover:bg-cyan-800/60">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="flex gap-6 mt-auto">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center text-cyan-300 hover:text-cyan-100 font-medium transition-all duration-300 group-hover:translate-x-2">
+                Live Demo <FaExternalLinkAlt className="ml-2" size={16} />
+              </a>
+              <a href="https://github.com/Janasmarty/Hostel-Management-Application" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white font-medium transition-all duration-300 group-hover:translate-x-2">
+                <FaGithub className="mr-2" size={20} /> Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Education Section */}
       <section id="education" className="min-h-screen flex flex-col justify-center px-8 bg-gray-950 pt-20 pb-20">
