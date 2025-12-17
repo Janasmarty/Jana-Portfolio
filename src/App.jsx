@@ -332,7 +332,7 @@ function App() {
                   <div>
                     <p className="text-cyan-400 font-semibold">2020 – 2021</p>
                     <h4 className="text-xl font-bold text-white mt-2">12th Grade, Biology Stream</h4>
-                    <p>Higher Secondary School • Percentage: 90%</p>
+                    <p>Higher Secondary School • Percentage: 87%</p>
                   </div>
                 </div>
               </div>
